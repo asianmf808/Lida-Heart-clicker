@@ -12,9 +12,10 @@ body {
   position: relative;
   width: fit-content;
   text-align: center;
-  transform: scale(0.6667);      /* уменьшаем в 1.5 раза */
-  transform-origin: top center;   /* масштабируем от центра сверху */
+  transform: scale(0.3333);      /* уменьшение в 2 раза от текущего */
+  transform-origin: top center;
 }
+
 
 #girl {
   width: 160px;          /* подбирай под свою кнопку */
@@ -45,4 +46,5 @@ body {
 body {
   background: var(--tg-theme-bg-color, white);
 }
+
 
