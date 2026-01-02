@@ -14,6 +14,7 @@ body {
   text-align: center;
   transform: scale(0.3333);      /* уменьшение в 2 раза от текущего */
   transform-origin: top center;
+  background: white;
 }
 
 
@@ -46,5 +47,6 @@ body {
 body {
   background: var(--tg-theme-bg-color, white);
 }
+
 
 
