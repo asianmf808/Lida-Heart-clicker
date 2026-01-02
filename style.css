@@ -4,8 +4,8 @@ body {
   padding: 0;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* по горизонтали */
+  align-items: flex-start; /* по вертикали сверху */
   background: white !important;
 }
 
@@ -13,14 +13,13 @@ body {
 #game {
   position: relative;
   text-align: center;
-  padding: 160px;       /* место для сердечек */
+  padding: 80px 120px 80px 120px; /* сверху, справа, снизу, слева */
   width: fit-content;
   background: white;
   overflow: visible;
 
-  /* Увеличиваем всё сразу 2x */
-  transform: scale(2);
-  transform-origin: top center; /* центрируем масштаб */
+  transform: scale(2.5);           /* увеличиваем всё */
+  transform-origin: top center;     /* масштабируем сверху по центру */
 }
 
 /* Кнопка */
