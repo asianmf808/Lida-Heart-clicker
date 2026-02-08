@@ -1,135 +1,62 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Nunito', sans-serif;
-    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
-    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffccd5, #ffb6c1);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    min-height: 100vh;
+    margin: 0;
 }
 
 .container {
     text-align: center;
-    max-width: 800px;
-    width: 100%;
+    padding: 30px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     color: #ff6b8b;
     margin-bottom: 20px;
-    font-size: 2.5rem;
 }
 
-.hearts-display {
-    background: linear-gradient(135deg, #ff6b8b, #ff8e6b);
-    color: white;
-    padding: 15px 30px;
-    border-radius: 50px;
-    display: inline-block;
+.hearts-count {
+    font-size: 2em;
+    color: #ff4081;
     margin-bottom: 30px;
-    font-size: 1.8rem;
     font-weight: bold;
-    box-shadow: 0 5px 15px rgba(255, 107, 139, 0.4);
 }
 
-#heartsCount {
-    font-size: 2.2rem;
-}
-
-.game-area {
-    margin: 30px 0;
-}
-
-/* Исправленная кнопка */
+/* ---------- ИСПРАВЛЕННАЯ КНОПКА ---------- */
 .heart-button {
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
-    outline: none;
     display: inline-block;
-    margin: 20px 0;
-    transition: transform 0.2s;
+    transition: transform 0.1s;
+    outline: none;
 }
 
 .heart-button:active {
-    transform: scale(0.98);
+    transform: scale(0.95); /* Плавное сжатие вместо пикселизации */
 }
 
-.heart-button-image {
+.button-image {
     width: 300px;
     height: 150px;
     display: block;
-    pointer-events: none;
-    transition: transform 0.1s ease;
+    pointer-events: none; /* Важно: клики проходят на кнопку */
+    transition: transform 0.1s;
 }
 
-.heart-button:active .heart-button-image {
-    transform: scale(0.95);
+.heart-button:active .button-image {
+    transform: scale(0.95); /* Дублируем для плавности */
 }
 
-.click-instruction {
+p {
+    margin-top: 20px;
     color: #666;
-    font-size: 1.1rem;
-    margin-top: 15px;
-}
-
-.stats {
-    background-color: #f8f9fa;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 30px 0;
-    display: inline-block;
-}
-
-.stat-item {
-    margin: 10px 0;
-    font-size: 1.2rem;
-}
-
-.stat-label {
-    color: #ff6b8b;
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-footer {
-    margin-top: 30px;
-    color: #888;
-    font-size: 0.9rem;
-}
-
-/* Для мобильных */
-@media (max-width: 600px) {
-    .container {
-        padding: 20px;
-    }
-    
-    h1 {
-        font-size: 2rem;
-    }
-    
-    .heart-button-image {
-        width: 250px;
-        height: 125px;
-    }
-    
-    .hearts-display {
-        font-size: 1.5rem;
-        padding: 12px 25px;
-    }
-    
-    #heartsCount {
-        font-size: 1.8rem;
-    }
+    font-size: 1.1em;
 }
