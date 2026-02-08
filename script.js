@@ -1,33 +1,25 @@
-const girl = document.getElementById('girl');
-const game = document.getElementById('game');
-const meow = document.getElementById('meow');
+let hearts = 0;
+const heartsElement = document.getElementById('hearts');
+const clickButton = document.getElementById('clickButton');
 
-// Массив сердечек
-const hearts = ['heart1.png', 'heart2.png'];
+function updateHearts() {
+    heartsElement.textContent = hearts;
+}
 
-girl.addEventListener('click', () => {
-  const heart = document.createElement('img');
-  heart.classList.add('heart');
-
-  // Случайная картинка
-  heart.src = hearts[Math.floor(Math.random() * hearts.length)];
-
-  // Позиция в пределах кнопки
-  const girlRect = girl.getBoundingClientRect();
-  const gameRect = game.getBoundingClientRect();
-
-  // Позиция относительно контейнера
-  heart.style.left = Math.random() * (girlRect.width - 40) + 'px';
-  heart.style.top = Math.random() * (girlRect.height - 40) + 'px';
-
-  game.appendChild(heart);
-
-  // Звук мяу
-  meow.currentTime = 0;
-  meow.play();
-
-  // Удаление сердечка после анимации
-  setTimeout(() => {
-    heart.remove();
-  }, 2000);
+// Убрана логика изменения width/height - теперь анимация в CSS
+clickButton.addEventListener('click', function() {
+    hearts++;
+    updateHearts();
 });
+
+// Для мобильных устройств
+clickButton.addEventListener('touchstart', function(event) {
+    event.preventDefault(); // Предотвращаем выделение
+    hearts++;
+    updateHearts();
+});
+
+// Инициализация
+updateHearts();
+});
+
