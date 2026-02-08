@@ -5,58 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lida Heart Clicker</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1>Lida Heart Clicker</h1>
-        
-        <div class="hearts-display">
-            <span id="heartsCount">0</span> hearts
+        <div class="hearts-count">
+            <span id="hearts">0</span> hearts
         </div>
         
-        <div class="game-area">
-            <!-- Исправленная кнопка -->
-            <button id="clickButton" class="heart-button" aria-label="Click to get hearts">
-                <img src="clickme.png" alt="Click Me!" class="heart-button-image" draggable="false">
-            </button>
-            
-            <div class="click-instruction">
-                Click the heart or button to earn hearts!
-            </div>
-        </div>
+        <!-- ИСПРАВЛЕННАЯ КНОПКА -->
+        <button id="clickButton" class="heart-button">
+            <img src="clickme.png" alt="Click Me!" class="button-image">
+        </button>
         
-        <div class="stats">
-            <div class="stat-item">
-                <span class="stat-label">Total Clicks:</span>
-                <span id="totalClicks">0</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-label">Hearts/Second:</span>
-                <span id="heartsPerSecond">0</span>
-            </div>
-        </div>
-        
-        <div class="upgrades-section">
-            <h2>Upgrades</h2>
-            <div class="upgrades-container">
-                <!-- Улучшения будут здесь -->
-                <div class="upgrade-item">
-                    <h3>Auto Clicker</h3>
-                    <p>Automatically clicks once per second</p>
-                    <button class="buy-button" data-upgrade="autoClicker">Buy (10 hearts)</button>
-                </div>
-            </div>
-        </div>
-        
-        <footer>
-            <p>Made with ❤️ by Lida | <a href="https://github.com/AsianMF808" target="_blank">GitHub</a></p>
-        </footer>
+        <p>Click the heart to earn hearts!</p>
     </div>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
